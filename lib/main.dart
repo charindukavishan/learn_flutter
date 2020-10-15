@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/screens/second_screen.dart';
 
 import 'screens/home_page.dart';
 
@@ -14,6 +15,9 @@ class MyApp extends StatelessWidget {
       home: HomePage( title: "app bar title"),
       theme: ThemeData(
       ),
+      routes: <String, WidgetBuilder>{
+        '/second': (context) => Second("Second page")
+      },
     );
   }
 }
