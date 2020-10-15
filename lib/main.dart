@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: HomePage( title: "app bar title"),
       theme: ThemeData(
       ),
     );
@@ -17,6 +17,9 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatefulWidget {
+  HomePage({this.title});
+  
+  final String title;
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -38,7 +41,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("flutter title")
+        title: Text(widget.title)
       ),
       body: Center(
         child: Column(
