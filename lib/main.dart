@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/screens/form.dart';
 import 'package:my_app/screens/second_screen.dart';
 import 'package:device_preview/device_preview.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       locale: DevicePreview.of(context).locale, // <--- /!\ Add the locale
       builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
-      home: HomePage( title: "app bar title"),
+      home: FormLearn(),
       theme: ThemeData(
         //brightness: Brightness.dark,
         dividerColor: Colors.blue
