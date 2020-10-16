@@ -29,62 +29,44 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text(widget.title)
       ),
-      body: ListView(
-        children: [
-          //Divider(),
-          ListTile(
-            leading: Icon(Icons.brightness_auto),
-            title: Text('Brightness'),
-            subtitle:  Text('change brightness'),
-            trailing:  Icon(Icons.menu),
-            onTap: (){},
-          ),
-          Divider(),
-          ListTile(
-            leading: Icon(Icons.brightness_auto),
-            title: Text('Brightness'),
-            subtitle:  Text('change brightness'),
-            trailing:  Icon(Icons.menu),
-            onTap: (){},
-          ),
-          Divider(),
-          ListTile(
-            leading: Icon(Icons.brightness_auto),
-            title: Text('Brightness'),
-            subtitle:  Text('change brightness'),
-            trailing:  Icon(Icons.menu),
-            onTap: (){},
-          ),
-          Divider(),ListTile(
-            leading: Icon(Icons.brightness_auto),
-            title: Text('Brightness'),
-            subtitle:  Text('change brightness'),
-            trailing:  Icon(Icons.menu),
-            onTap: (){},
-          ),
-          Divider(),ListTile(
-            leading: Icon(Icons.brightness_auto),
-            title: Text('Brightness'),
-            subtitle:  Text('change brightness'),
-            trailing:  Icon(Icons.menu),
-            onTap: (){},
-          ),
-          Divider(),ListTile(
-            leading: Icon(Icons.brightness_auto),
-            title: Text('Brightness'),
-            subtitle:  Text('change brightness'),
-            trailing:  Icon(Icons.menu),
-            onTap: (){},
-          ),
-          Divider(),ListTile(
-            leading: Icon(Icons.brightness_auto),
-            title: Text('Brightness'),
-            subtitle:  Text('change brightness'),
-            trailing:  Icon(Icons.menu),
-            onTap: (){},
-          ),
-          Divider(),
-        ],
+      body: Container(
+          height: 100,
+          child: ListView(
+          scrollDirection: Axis.horizontal,
+          children: [
+            //Divider(),
+            Container(
+              width: 100,
+              height: 100,
+              color: Colors.black,
+            ),
+            Container(
+              width: 100,
+              height: 100,
+              color: Colors.blueGrey,
+            ),Container(
+              width: 100,
+              height: 100,
+              color: Colors.yellow,
+            ),Container(
+              width: 100,
+              height: 100,
+              color: Colors.white,
+            ),Container(
+              width: 100,
+              height: 100,
+              color: Colors.blue,
+            ),Container(
+              width: 100,
+              height: 100,
+              color: Colors.teal,
+            ),Container(
+              width: 100,
+              height: 100,
+              color: Colors.cyanAccent,
+            ),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
