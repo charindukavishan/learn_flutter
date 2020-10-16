@@ -16,9 +16,34 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    title.text = "form";
     return Scaffold(
-        appBar: AppBar(title: Text(widget.title)),
+        appBar: AppBar(
+          title: TextField(
+             controller: title,
+             decoration: InputDecoration(
+               prefixIcon: Icon(
+                 Icons.search,
+                 color: Colors.white,
+                 ),
+               suffixIcon: IconButton(
+                 icon: Icon(
+                   Icons.close,
+                   color: Colors.white,                   
+                  ),
+                  onPressed: (){
+                    title.text = '';
+                  },
+               ),
+               border: InputBorder.none,
+               filled: true,
+               hintText: 'Search something...',
+               hintStyle: TextStyle(
+                 color: Colors.white
+               ),
+             ),
+             cursorColor: Colors.black,
+          )
+        ),
         body: Center(
           child: Column(
             children: [
@@ -27,7 +52,7 @@ class _HomePageState extends State<HomePage> {
               child: TextField(
                 enabled: true,
                 obscureText: false,
-                controller: title,
+                //controller: title,
                 onChanged: (text) {
                   print(text);
                 },
