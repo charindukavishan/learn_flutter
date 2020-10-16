@@ -13,60 +13,27 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
 
-  int a =0 ;
+var items = List<String>.generate(100, (index) => 'Item $index');
 
-
-  void increment(){
-    
-    setState(() {
-      a++;
-      print(a);
-    });
-  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title)
       ),
-      body: Container(
-          height: 100,
-          child: ListView(
-          scrollDirection: Axis.horizontal,
-          children: [
-            //Divider(),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.black,
-            ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.blueGrey,
-            ),Container(
-              width: 100,
-              height: 100,
-              color: Colors.yellow,
-            ),Container(
-              width: 100,
-              height: 100,
-              color: Colors.white,
-            ),Container(
-              width: 100,
-              height: 100,
-              color: Colors.blue,
-            ),Container(
-              width: 100,
-              height: 100,
-              color: Colors.teal,
-            ),Container(
-              width: 100,
-              height: 100,
-              color: Colors.cyanAccent,
-            ),
-          ],
-        ),
+      body: ListView.builder(
+        itemCount: items.length,
+        itemBuilder: (context, index) {
+          return Center(
+              child: Column(
+                children: [
+                  ListTile(
+                    title: Text(items[index], textAlign: TextAlign.center,),
+                  ),
+                ],
+              ),
+          );
+        },        
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
