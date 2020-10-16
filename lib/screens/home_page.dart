@@ -29,13 +29,62 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text(widget.title)
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text("welcome to the home page")
-          ],
-        )
+      body: ListView(
+        children: [
+          //Divider(),
+          ListTile(
+            leading: Icon(Icons.brightness_auto),
+            title: Text('Brightness'),
+            subtitle:  Text('change brightness'),
+            trailing:  Icon(Icons.menu),
+            onTap: (){},
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(Icons.brightness_auto),
+            title: Text('Brightness'),
+            subtitle:  Text('change brightness'),
+            trailing:  Icon(Icons.menu),
+            onTap: (){},
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(Icons.brightness_auto),
+            title: Text('Brightness'),
+            subtitle:  Text('change brightness'),
+            trailing:  Icon(Icons.menu),
+            onTap: (){},
+          ),
+          Divider(),ListTile(
+            leading: Icon(Icons.brightness_auto),
+            title: Text('Brightness'),
+            subtitle:  Text('change brightness'),
+            trailing:  Icon(Icons.menu),
+            onTap: (){},
+          ),
+          Divider(),ListTile(
+            leading: Icon(Icons.brightness_auto),
+            title: Text('Brightness'),
+            subtitle:  Text('change brightness'),
+            trailing:  Icon(Icons.menu),
+            onTap: (){},
+          ),
+          Divider(),ListTile(
+            leading: Icon(Icons.brightness_auto),
+            title: Text('Brightness'),
+            subtitle:  Text('change brightness'),
+            trailing:  Icon(Icons.menu),
+            onTap: (){},
+          ),
+          Divider(),ListTile(
+            leading: Icon(Icons.brightness_auto),
+            title: Text('Brightness'),
+            subtitle:  Text('change brightness'),
+            trailing:  Icon(Icons.menu),
+            onTap: (){},
+          ),
+          Divider(),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),

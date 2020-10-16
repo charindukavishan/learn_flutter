@@ -19,6 +19,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: HomePage( title: "app bar title"),
       theme: ThemeData(
+        //brightness: Brightness.dark,
+        dividerColor: Colors.blue
       ),
       routes: <String, WidgetBuilder>{
         '/second': (context) => Second("Second page")
