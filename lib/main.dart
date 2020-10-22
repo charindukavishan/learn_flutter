@@ -1,13 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/screens/form.dart';
+import 'package:my_app/screens/login.dart';
+import 'package:my_app/screens/menu.dart';
+import 'package:my_app/screens/moduleForm.dart';
+import 'package:my_app/screens/profile.dart';
 import 'package:my_app/screens/second_screen.dart';
 import 'package:device_preview/device_preview.dart';
+import 'package:my_app/screens/test.dart';
+import 'package:my_app/services/httm.service.dart';
+import 'package:provider/provider.dart';
 
 import 'screens/home_page.dart';
 
 void main() {
-  runApp(DevicePreview(
-    builder: (context) => MyApp(),
+  runApp(MultiProvider(
+      providers: [ChangeNotifierProvider(create: (context) => Auth())],
+      child: MyApp()
+      
+    //   DevicePreview(
+    //   builder: (context) => MyApp(),
+    // ),
   ));
 }
 
@@ -15,10 +27,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      locale: DevicePreview.of(context).locale, // <--- /!\ Add the locale
-      builder: DevicePreview.appBuilder,
+      // locale: DevicePreview.of(context).locale, // <--- /!\ Add the locale
+      // builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
-      home: FormLearn(),
+      home: ModuleForm(),
       theme: ThemeData(
         //brightness: Brightness.dark,
         dividerColor: Colors.blue
